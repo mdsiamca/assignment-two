@@ -42,7 +42,11 @@ h1{
     font-size: 20px;
     text-align: center;
 }
-
+.button:hover{
+    background-color: rgb(77, 9, 249);
+    transition:1s;
+    transform: rotateX(360deg);
+}
 .three-menu{
     width: 200px;
     height: 200px;
@@ -63,6 +67,11 @@ h1{
     font-size: 20px;
     background-color: aliceblue;
 }
+#upcomming-match{
+    background-color: red;
+    color: white;
+    font-size: 15px;
+}
 .body-content{
     display: grid;
     grid-template-columns: 25% 75%;
@@ -70,7 +79,7 @@ h1{
     margin: 100px 50px;
 }
 /* ---------------
--------blogs------
+-------match list------
 ------------------- */
 .live-match{
     display: grid;
@@ -95,8 +104,21 @@ h1{
     width: 300px;
     text-align: center;
 }
-
-
+/* ---------------
+------end match list------
+------------------- */
+.view-all{
+    text-decoration: none;
+    margin: 15px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 3px solid red;
+    background-color: red;
+    color: rgb(246, 233, 233);
+    font-size: 20px;
+    text-align: center;
+    visibility: hidden;
+}
 /* -----------------
     footer   
  ------------------ */
@@ -111,7 +133,12 @@ h1{
     padding: 20px;
     color: white;
  }
-
+ .social-icon{
+    margin: 20px;
+    padding: 15px;
+    font-size: 30px;
+    color: aliceblue;
+ }
  /*----------------------------
   responsive for mobile
   ----------------------------- */
@@ -133,5 +160,33 @@ h1{
     }
     .live-match{
         grid-template-columns: repeat(1, 1fr);
+    }
+ }
+  /*----------------------------
+   end responsive for mobile
+  ----------------------------- */
+  /*----------------------------
+  responsive for tablet
+  ----------------------------- */
+  @media screen and (min-width:577px) and (max-width:892px) {
+    .container {
+        width: 100%;
+    }
+    .banner{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    .half{
+        width: 100%;
+    }
+    .body-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .live-match{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .view-all{
+        visibility: visible;
     }
  }
